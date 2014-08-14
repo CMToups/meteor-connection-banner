@@ -46,6 +46,20 @@ Meteor.startup(function(){
 				return Meteor.settings.public.connectionBanner.reconnectAfterCountdownText;
 			else
 				return defaultText;
+		},
+		'connectionBannerClass': function () {
+			var defaultText = 'MeteorConnection-bannerClass'
+			if(Meteor.settings && Meteor.settings.public && Meteor.settings.public.connectionBanner && Meteor.settings.public.connectionBanner.bannerClass)
+				return Meteor.settings.public.connectionBanner.bannerClass;
+			else
+				return defaultText
+		},
+		'connectionBannerLinkClass': function () {
+			var defaultText = 'MeteorConnection-linkClass'
+			if(Meteor.settings && Meteor.settings.public && Meteor.settings.public.connectionBanner && Meteor.settings.public.connectionBanner.linkClass)
+				return Meteor.settings.public.connectionBanner.linkClass;
+			else
+				return defaultText
 		}
 	});
 
