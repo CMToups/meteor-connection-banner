@@ -48,14 +48,14 @@ Meteor.startup(function(){
 				return defaultText;
 		},
 		'connectionBannerClass': function () {
-			var defaultText = 'MeteorConnection-bannerClass'
+			var defaultText = 'alert alert-danger'
 			if(Meteor.settings && Meteor.settings.public && Meteor.settings.public.connectionBanner && Meteor.settings.public.connectionBanner.bannerClass)
 				return Meteor.settings.public.connectionBanner.bannerClass;
 			else
 				return defaultText
 		},
 		'connectionBannerLinkClass': function () {
-			var defaultText = 'MeteorConnection-linkClass'
+			var defaultText = 'alert-link'
 			if(Meteor.settings && Meteor.settings.public && Meteor.settings.public.connectionBanner && Meteor.settings.public.connectionBanner.linkClass)
 				return Meteor.settings.public.connectionBanner.linkClass;
 			else
